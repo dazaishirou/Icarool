@@ -1,0 +1,149 @@
+body {background:#33184f url(https://i.ibb.co/pQnWsRr/8ab0b0cf-837d-4bc0-b6df-889684bfa05f.jpg) fixed center/cover no-repeat; padding:1px 0 0; font-family:karla; color:#ccc; margin:0; height:100%;}
+html {padding:0; margin:0; height:100%;}
+canvas{display: block; vertical-align: bottom;}
+h1,h2,h3,h4,h5,h6 {margin:0;}
+@font-face { src:url(https://files.jcink.net/uploads/vonskins/fonts/Qaligo_Regular___Demo.otf) format("OpenType"),url(https://files.jcink.net/uploads/vonskins/fonts/Qaligo_Regular___Demo.ttf) format("TrueType");
+font-family:Qaaligo; 
+}
+@font-face{font-family:RPGAwesome;src:url(https://files.jcink.net/uploads/vonskins/fantasy_icon/rpgawesome_webfont.eot?v=0.1.0);src:url(https://files.jcink.net/uploads/vonskins/fantasy_icon/rpgawesome_webfont.eot?#iefix&v=0.1.0) format("embedded-opentype"),url(https://files.jcink.net/uploads/vonskins/fantasy_icon/rpgawesome_webfont.woff?v=0.1.0) format("woff"),url(https://files.jcink.net/uploads/vonskins/fantasy_icon/rpgawesome_webfont.ttf?v=0.1.0) format("truetype"),url(https://files.jcink.net/uploads/vonskins/fantasy_icon/rpgawesome_webfont.svg?v=0.1.0#rpg-awesome) format("svg");font-weight:400;font-style:normal}
+
+a.circ {display:inline-block; border-radius:100%; color:#eee; font:bold 8px Karla; letter-spacing:1px; box-shadow:rgba(255,255,255,0.2) inset 0 0 35px;}
+.circ circ {display:flex; flex-flow:column wrap; text-align:center; align-items:center; justify-content:center; width:80px; height:80px; border-radius:100%; border:rgba(255,255,255,0.2) solid 1px; position:relative;}
+
+circ:before {content:''; display:block; width:56px; height:56px; position:absolute; transform:rotate(45deg); border:rgba(0) solid 1px;}
+circ:after {content:''; display:block; width:56px; height:56px; border:rgba(255,255,255,0.2) dashed 1px; position:absolute;}
+
+:root {
+  --default1:#485795;
+  --default2:#b6d496;
+  --default3:#403365;
+  --defaultRGB1:182, 212, 150;
+  --defaultRGB2:182, 212, 150;
+  --defaultRGB3:64, 51, 101;
+  --lightBlue:#8c879d;
+}
+
+a {text-decoration:none; color:var(--default1);}
+
+@keyframes pulse {
+  0% {box-shadow:rgba(var(--defaultRGB2), 0.7) 0 0 0 0;}
+  100% {box-shadow:rgba(var(--defaultRGB2), 0) 0 0 0 10px;}
+}
+
+@keyframes magic {
+  0% {box-shadow:rgba(var(--defaultRGB2), 0.7) inset 1px 1px 25px 1px;}
+  50% {box-shadow:rgba(var(--defaultRGB2), 0.7) inset 1px 1px 10px 1px;}
+  100% {box-shadow:rgba(var(--defaultRGB2), 0.7) inset 1px 1px 25px 1px;}
+}
+
+#particles-js{ position:fixed; width: 100%; height: 100%;}
+
+.sidebar {position:fixed;top:0; left:0; height:100%; background:#bbb; z-index:99;}
+.sidebar a {display:block; font-size:20px; border-bottom:#b0b0b0 solid 1px; display:flex; align-items:center; justify-content:center; width:50px; height:50px;}
+
+.star-banner {width:1200px; margin:200px auto 0; display:flex; flex-flow:column wrap; align-items:center; justify-content:center; position:relative;}
+.banner-c {background:#; width:400px; height:400px; overflow:hidden; border-radius:100%; position:relative;}
+
+.banner-c img {position:absolute; top:-px;left:-20px; width:500px;}
+.banner-c img:first-child {mix-blend-mode:saturation;}
+.banner-c img:last-child {mix-blend-mode:lumminosity; opacity:0.;}
+
+.star-title {color:#eee; position:absolute; z-index:3;text-shadow:rgba(5,5,5,0.5) 0 1px 15px; text-transform:lowercase; text-transform:uppercase; text-align:center;}
+
+.star-title h1 {font:30px/180% Qaaligo; text-align:center; margin:50px 0 0;}
+.star-title i {display:block; font-style:normal; margin:0 10px 0 0;}
+.star-title h5 {font:700 15px Karla; letter-spacing:1px; color:#eee;}
+.star-title h5:before {content:''; display:block; width:10px; height:10px; background:rgba(255,255,255,0.4); margin:10px auto 15px; box-shadow:rgba(var(--defaultRGB2), 0.6) 0 0 0 5px; transform:rotate(45deg); animation:pulse 1.5s infinite ease;}
+
+.hands {width:800px;position:absolute; top:-220px; z-index:2; opacity:0.5;}
+
+#wrapper {position:relative; z-index:10; padding:0 0 1px; }
+.the-wrapper {width:1200px; margin:200px auto 200px;}
+.star-top {border:rgba(255,255,255,0.2) solid; border-width:2px; padding:5px 0; position:relative; margin:0 5px;}
+.star-top:before {content:''; display:block;   width:1200px; height:calc(100% - 14px); position:absolute; left:-9px;border:rgba(255,255,255,0.2) solid 2px;}
+.star-top2 {position:relative;z-index:5; padding:60px; display:flex; flex-flow:row-reverse nowrap;}
+.star-events {display:flex; flex-flow:column wrap; align-items:center; justify-content:center; background-color:var(--default3); background-size:cover; background-blend-mode:multiply; margin:0 0 0 60px; padding:40px; text-align:center; width:400px; height:200px; box-shadow:rgba(5,5,5,0.2) 0 1px 15px;}
+.star-events circ {margin:0 auto; border:none; width:60px; height:60px; font:italic bold 25px/80% Times New Roman; box-shadow:rgba(var(--defaultRGB2), 0.7) inset 1px 1px 25px 1px; animation:magic 2s infinite ease; -webkit-appearance:none;}
+.star-events circ:before, .star-events circ:after {width:42px; height:42px;border-color:rgba(255,255,255,0.3);}
+.star-events h1 {margin:25px 0 0; font:15px/180% Qaaligo;}
+
+.sm-icon {position:absolute; left:15px; top:-100px; width:500px; opacity:0.3;}
+.star-misc {flex:1 1 auto; background:var(--lightBlue); position:relative; text-align:center; overflow:hidden;}
+.star-misc [type=checkbox] {display:none}
+.star-misc label {cursor:pointer; font-size:35px; position:absolute; z-index:2; bottom:5px; right:245px;}
+.star-misc:after {content:''; display:block; width:100px; height:100px; transform:rotate(45deg); background:rgba(5,5,5,0.1); position:absolute; bottom:-50px; right:210px;}
+
+.sm-updates {padding:30px; opacity:1; transition:700ms ease; position:relative; z-index:1;}
+.sm-updates h1 {font:20px Qaaligo; text-transform:lowercase; color:var(--default1);}
+.sm-updates h5 {font:bold 10px Karla; letter-spacing:1px; color:#eee; border:#eee solid; display:inline-block; border-width:2px 0; padding:5px 0; margin:10px 0;}
+.sm-updates section {height:80px; overflow:auto;}
+.sm-updates section::-webkit-scrollbar {width:0;}
+.sm-updates p {margin:0; font:12px/150% Karla;}
+.sm-updates b {background:var(--default1); display:inline-block; padding:1px 3px; font-size:8px; line-height:90%; letter-spacing:1px;}
+.sm-updates i {font:italic bold 12px playfair display; color:var(--default1);}
+.sm-staffs {opacity:0; position:absolute; z-index:0; top:0; left:0; width:100%; box-sizing:border-box; transition:600ms ease;}
+
+.star-misc input:checked ~ label ~ .sm-updates {opacity:0;}
+
+.star-misc input:checked ~ label ~ .sm-staffs {opacity:1; z-index:2; transition:600ms ease 500ms;}
+
+
+.innerwrapper {margin:40px 0 0; padding:0 0 200px;}
+.cat{color:#222; margin:0 0 40px;}
+.cat-title {padding:50px;}
+.cat-title span {display:inline-block; font:700 12px Assistant; color:#ccc; letter-spacing:3px;}
+.boards {padding:40px;}
+
+
+#navi { position:fixed; z-index:999; top:0; left:0; right:0; background:var(--default3); padding:10px; box-shadow:rgba(5,5,5,0.1) 0 1px 15px;}
+.navstrip {border:rgba(255,255,255,0.1) solid 1px; padding:15px; font:bold 8px Karla; letter-spacing:1px;}
+.navstrip a:first-child{font:bold italic 12px Karla;}
+.navstrip a {display:inline-block; margin:0 10px 0 0;}
+
+
+.board-stat {position:absolute; bottom:0; left:0; right:0; background:#302745 url(https://i.imgur.com/c4JbySz.jpg) fixed bottom center/cover no-repeat; background-blend-mode:lighten; padding:60px; color:#ccc;}
+
+.bs-cont {width:1200px; margin:0 auto;}
+
+.circ h3 {font:bold 25px/150% Qaaligo;}
+
+
+/*----- 【 MUSIC PLAYER #08 by @glenthemes 】 -----*/
+[glenplayer08]{
+	
+	/*-- player position --*/
+	--MusicPlayer-Position: "bottom left";
+	--MusicPlayer-Corner-Offset: 20px;
+	
+	/*-- album image --*/
+	--MusicPlayer-Album-Image-Size: 54px;
+	--MusicPlayer-Album-Image-Corner-Roundness: 3px;
+	
+	/*-- player buttons (play/pause) --*/
+	--MusicPlayer-Buttons-Size: 12px;
+	--MusicPlayer-Buttons-Color: #ddd;
+	--MusicPlayer-Buttons-Padding: 8px;
+	--MusicPlayer-Buttons-Border-Size: 1px;
+	--MusicPlayer-Buttons-Border-Color: #bbb;
+	--MusicPlayer-Buttons-Background: #000000;
+	--MusicPlayer-Buttons-Background-Transparency: 45%;
+	--MusicPlayer-Buttons-Background-Blur: 3px;
+	
+	/*-- player song name --*/
+	--MusicPlayer-Song-Name-Size: 12px;
+	--MusicPlayer-Song-Name-Color: #222;
+	
+	/*-- player artist name --*/
+	--MusicPlayer-Artist-Name-Size: 12px;
+	--MusicPlayer-Artist-Name-Color: #777;
+	
+	/*-- player gap/spacing --*/
+	--MusicPlayer-Center-Gap: 14px;
+	--MusicPlayer-Text-Line-Spacing: 4px;
+	
+	/*-- playback settings --*/
+	--MusicPlayer-Autoplay: "no";
+	--MusicPlayer-Replay: "no";
+	
+}/* don't delete this line */
+/*---- END MUSIC PLAYER ----*/
